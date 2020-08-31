@@ -1,16 +1,16 @@
 # ACore-lxd-image
 ACore LXD image based on Ubuntu 20.04. Setup and GO!
 
-Download LXD Image: https://mega.nz/file/JAwzCDCA#69TzRnA5S6fxd2YRl2tBlkiRkDDt9HzyEDciwARferA
+Download LXD Image: https://mega.nz/file/JAwzCDCA#69TzRnA5S6fxd2YRl2tBlkiRkDDt9HzyEDciwARferA  
 acore-img-ubuntu.tar.gz MD5sum: ba063295065417f5be3025c88e43a666
 
 Support : [AzerothCore](http://azerothcore.org)
 
 ## Components
-OS: Ubuntu 20.04
-MySQL: 8.0
-ACore: latest from Git
-Client data: (https://github.com/wowgaming/client-data/releases/tag/v7)
+OS: Ubuntu 20.04  
+MySQL: 8.0  
+ACore: latest from Git  
+Client data: (https://github.com/wowgaming/client-data/releases/tag/v7)  
 ACore restarter: https://github.com/nolt/acore-linux-restarter
 
 ## Requirements
