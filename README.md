@@ -10,7 +10,7 @@ Support : [AzerothCore](http://azerothcore.org)
 OS: Ubuntu 20.04  
 MySQL: 8.0  
 ACore: latest from Git  
-Client data: (https://github.com/wowgaming/client-data/releases/tag/v7)  
+Client data: (https://github.com/wowgaming/client-data/releases/tag/v9)  
 ACore restarter: https://github.com/nolt/acore-linux-restarter
 
 ## Requirements
