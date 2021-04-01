@@ -1,10 +1,10 @@
 # ACore-lxd-image
 ACore LXD image based on Ubuntu 20.04. Setup and GO!
 
-Download LXD Image: https://mega.nz/file/5dJFSQwK#OiEJcflQpwoGm_vzPSjblUa9399WfscziAtKuw34jf0  
-acore-img-ubuntu.tar.gz sha1sum: 150be95dd829fdbf653fdfab13c0182710585be2  
+Download LXD Image: https://mega.nz/file/4RYARJZD#KHoJ4L6t9aU9MU5O2sKMC3u8IAe91mjIVsxnCIGmq1c  
+acore-img-ubuntu.tar.gz sha1sum: 63e8c6266fcebc355ed5d2172f916a2fe99c0236  
 
-Checkout this: [Video tutorial](https://asciinema.org/a/401476)
+Checkout this: [Video tutorial](https://asciinema.org/a/404479)
 
 Support : [AzerothCore](http://azerothcore.org)
 
