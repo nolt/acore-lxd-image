@@ -35,7 +35,7 @@ print_style "Installation process depends on your hardware specs and connection 
 print_style "---------------------------------------------------------------------------\n" "warning"
 sleep 2
 print_style "Please tell me what DB would you like to use MariaDB 10.x or Oracle MySQL 8.0\n" "info"
-print_style "If you do not choose and hit ENTER, it will be installed by default Oracle MySQL\n" "info"
+print_style "If you do not chose and hit ENTER, it will be installed by default Oracle MySQL\n" "info"
 print_style "Please provide anserw: mariadb or mysql\n" "danger"
 read mver
 
@@ -43,7 +43,7 @@ MVER=${mver}
 
 if [ "$MVER" = "mariadb" ] ; then
 
-	print_style "You choose MariaDB, installation will start now\n"
+	print_style "You chose MariaDB, installation will start now\n"
 
 lxc launch ubuntu:focal acoremariadb
 sleep 5
@@ -82,7 +82,7 @@ wget https://raw.githubusercontent.com/nolt/acore-linux-restarter/master/acoread
 chmod +x acoreadmin.sh"
 
 else
-	print_style "You choose Oracle MySQL, installation will start now\n"
+	print_style "You chose Oracle MySQL, installation will start now\n"
 
 lxc launch ubuntu:focal acoremysql
 sleep 5
