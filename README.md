@@ -4,6 +4,12 @@
 
 ## Introduction
 Install AzerothCore server using LXD container.
+- master branch - script based installation
+- full-images branch - complete LXD images
+
+### Wiki
+Manual setup and installation LXD and AzerothCore  
+[DIY installation](https://github.com/nolt/acore-lxd-image/wiki)
 
 ## Requirements
 Installed and configured LXD on your Linux.
