@@ -4,8 +4,8 @@
 
 ## Introduction
 Install AzerothCore server using LXD container.
-- master branch - script based installation
-- full-images branch - complete LXD images
+- **master** branch - script based installation
+- **full-images** branch - complete LXD images
 
 ### Wiki
 Manual setup and installation LXD and AzerothCore  
