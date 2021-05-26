@@ -50,7 +50,7 @@ sleep 5
 
 lxc exec acoremariadb -- bash -c "
 apt update && apt full-upgrade -y
-apt install -y git cmake make gcc g++ clang libssl-dev libbz2-dev libreadline-dev libncurses-dev libace-6.* libace-dev mariadb-server mariadb-client libmariadb-dev libmariadbclient-dev libmariadb-dev-compat gdb screen unzip
+apt install -y git cmake make gcc g++ clang libssl-dev libbz2-dev libreadline-dev libncurses-dev libace-6.* libace-dev libboost-all-dev mariadb-server mariadb-client libmariadb-dev libmariadbclient-dev libmariadb-dev-compat gdb screen unzip
 mysql <<MYSQL_SCRIPT
 DROP USER IF EXISTS 'acore'@'localhost';
 DROP USER IF EXISTS 'acore'@'127.0.0.1';
@@ -89,7 +89,7 @@ sleep 5
 
 lxc exec acoremysql -- bash -c "
 apt update && apt full-upgrade -y
-apt install -y git cmake make gcc g++ clang libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libace-6.* libace-dev gdb screen unzip
+apt install -y git cmake make gcc g++ clang libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libace-6.* libace-dev libboost-all-dev gdb screen unzip
 mysql <<MYSQL_SCRIPT
 DROP USER IF EXISTS 'acore'@'localhost';
 DROP USER IF EXISTS 'acore'@'127.0.0.1';
