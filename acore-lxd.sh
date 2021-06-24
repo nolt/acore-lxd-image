@@ -64,7 +64,7 @@ cd /usr/src/
 git clone https://github.com/azerothcore/azerothcore-wotlk.git --branch master --single-branch azerothcore
 cd /usr/src/azerothcore/
 mkdir build && cd build
-cmake ../ -DCMAKE_INSTALL_PREFIX=/opt/azeroth-server/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DWITH_WARNINGS=1 -DTOOLS=0 -DSCRIPTS=1
+cmake ../ -DCMAKE_INSTALL_PREFIX=/opt/azeroth-server/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DWITH_WARNINGS=1 -DTOOLS=0 -DSCRIPTS=static
 make -j 8 && make install
 cd ..
 bash apps/db_assembler/db_assembler.sh 5
@@ -103,7 +103,7 @@ cd /usr/src/
 git clone https://github.com/azerothcore/azerothcore-wotlk.git --branch master --single-branch azerothcore
 cd /usr/src/azerothcore/
 mkdir build && cd build
-cmake ../ -DCMAKE_INSTALL_PREFIX=/opt/azeroth-server/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DWITH_WARNINGS=1 -DTOOLS=0 -DSCRIPTS=1
+cmake ../ -DCMAKE_INSTALL_PREFIX=/opt/azeroth-server/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DWITH_WARNINGS=1 -DTOOLS=0 -DSCRIPTS=static
 make -j 8 && make install
 cd ..
 bash apps/db_assembler/db_assembler.sh 5
