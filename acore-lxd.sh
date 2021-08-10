@@ -70,7 +70,7 @@ cd ..
 bash apps/db_assembler/db_assembler.sh 5
 cd /opt/azeroth-server/
 mkdir data && cd data
-wget https://github.com/wowgaming/client-data/releases/download/v10/data.zip
+wget https://github.com/wowgaming/client-data/releases/download/v11/data.zip
 unzip data.zip
 rm -fr data.zip
 cd /opt/azeroth-server/etc/
@@ -109,7 +109,7 @@ cd ..
 bash apps/db_assembler/db_assembler.sh 5
 cd /opt/azeroth-server/
 mkdir data && cd data
-wget https://github.com/wowgaming/client-data/releases/download/v10/data.zip
+wget https://github.com/wowgaming/client-data/releases/download/v11/data.zip
 unzip data.zip
 rm -fr data.zip
 cd /opt/azeroth-server/etc/
