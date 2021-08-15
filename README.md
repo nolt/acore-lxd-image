@@ -4,11 +4,11 @@ ACore LXD image based on Ubuntu 20.04. Setup and GO!
 #### [Video tutorial](https://asciinema.org/a/404479)
 
 ## LXD Image downloads  
-ACore with MariaDB: https://mega.nz/file/8Fx0Uaxa#tzzZspTurk_vbS01iTGL8Hvv4fKIvZSHzcsxWuEMqG8  
-acore-img-mariadb-ubuntu.tar.gz SHA1: a933819e45f8fa13f8a9be7ef643b632127caf84
+ACore with MariaDB: https://mega.nz/file/oIg0CLLD#hDJf40IJ_fpiq9P-xXVIFsKzVT0OFNnNyk8ycJVF-1Y  
+acore-img-mariadb-ubuntu.tar.gz SHA1: 9b5025cecae8970d2825a8f04891705917a08a0e
 
-Acore with MySQL: https://mega.nz/file/UMRxkC4L#acbbmLl-wnLo5fWYjYuKbnWWAE8aFLVYSoYo_50lN0o
-acore-img-mysql-ubuntu.tar.gz SHA1: 06a6a4867454fe0bb74a67161cff20959fe67449
+Acore with MySQL: https://mega.nz/file/oEwVTCRI#JXp3Y3VMf-tu-aVd8REdnXfrYMRImp87b52MkMfd84Y
+acore-img-mysql-ubuntu.tar.gz SHA1: 5dc582f54836633c1d9d6ae213a55fc97dfadd78
 
 Support : [AzerothCore](http://azerothcore.org)
 
@@ -16,7 +16,7 @@ Support : [AzerothCore](http://azerothcore.org)
 OS: Ubuntu 20.04  
 MariaDB: 10.3 or MySQL: 8.0  
 ACore: latest from Git  
-Client data: (https://github.com/wowgaming/client-data/releases/tag/v10)  
+Client data: (https://github.com/wowgaming/client-data/releases/tag/v11)  
 ACore restarter: https://github.com/nolt/acore-linux-restarter
 
 ## Requirements
