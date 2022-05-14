@@ -65,12 +65,12 @@ git clone https://github.com/azerothcore/azerothcore-wotlk.git --branch master -
 cd /usr/src/azerothcore/
 mkdir build && cd build
 cmake ../ -DCMAKE_INSTALL_PREFIX=/opt/azeroth-server/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DWITH_WARNINGS=1 -DTOOLS=0 -DSCRIPTS=static
-make -j 8 && make install
+make -j `nproc` && make install
 cd ..
 bash apps/db_assembler/db_assembler.sh 5
 cd /opt/azeroth-server/
 mkdir data && cd data
-wget https://github.com/wowgaming/client-data/releases/download/v13/data.zip
+wget https://github.com/wowgaming/client-data/releases/download/v14/data.zip
 unzip data.zip
 rm -fr data.zip
 cd /opt/azeroth-server/etc/
@@ -104,12 +104,12 @@ git clone https://github.com/azerothcore/azerothcore-wotlk.git --branch master -
 cd /usr/src/azerothcore/
 mkdir build && cd build
 cmake ../ -DCMAKE_INSTALL_PREFIX=/opt/azeroth-server/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DWITH_WARNINGS=1 -DTOOLS=0 -DSCRIPTS=static
-make -j 8 && make install
+make -j `nproc` && make install
 cd ..
 bash apps/db_assembler/db_assembler.sh 5
 cd /opt/azeroth-server/
 mkdir data && cd data
-wget https://github.com/wowgaming/client-data/releases/download/v13/data.zip
+wget https://github.com/wowgaming/client-data/releases/download/v14/data.zip
 unzip data.zip
 rm -fr data.zip
 cd /opt/azeroth-server/etc/
