@@ -50,6 +50,12 @@ sleep 5
 
 lxc exec acoremariadb -- bash -c "
 apt update && apt full-upgrade -y
+wget https://downloads.mariadb.com/MariaDB/mariadb_repo_setup
+echo "d4e4635eeb79b0e96483bd70703209c63da55a236eadd7397f769ee434d92ca8 mariadb_repo_setup" | sha256sum -c -
+chmod +x mariadb_repo_setup
+./mariadb_repo_setup --mariadb-server-version="mariadb-10.6"
+rm -f mariadb_repo_setup
+apt update
 apt install -y clang cmake g++ gcc gdb git libboost-all-dev libbz2-dev libmariadb-dev libmariadb-dev-compat libncurses-dev libreadline-dev libssl-dev make mariadb-client mariadb-server screen unzip
 mysql <<MYSQL_SCRIPT
 DROP USER IF EXISTS 'acore'@'localhost';
@@ -70,7 +76,7 @@ cd ..
 bash apps/db_assembler/db_assembler.sh 5
 cd /opt/azeroth-server/
 mkdir data && cd data
-wget https://github.com/wowgaming/client-data/releases/download/v14/data.zip
+wget https://github.com/wowgaming/client-data/releases/download/v15/data.zip
 unzip data.zip
 rm -fr data.zip
 cd /opt/azeroth-server/etc/
@@ -109,7 +115,7 @@ cd ..
 bash apps/db_assembler/db_assembler.sh 5
 cd /opt/azeroth-server/
 mkdir data && cd data
-wget https://github.com/wowgaming/client-data/releases/download/v14/data.zip
+wget https://github.com/wowgaming/client-data/releases/download/v15/data.zip
 unzip data.zip
 rm -fr data.zip
 cd /opt/azeroth-server/etc/
