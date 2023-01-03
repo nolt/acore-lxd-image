@@ -69,13 +69,13 @@ cd /usr/src/
 git clone https://github.com/azerothcore/azerothcore-wotlk.git --branch master --single-branch azerothcore
 cd /usr/src/azerothcore/
 mkdir build && cd build
-cmake ../ -DCMAKE_INSTALL_PREFIX=/opt/azeroth-server/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DWITH_WARNINGS=1 -DTOOLS=0 -DSCRIPTS=static -DMODULES=static
+cmake ../ -DCMAKE_INSTALL_PREFIX=/opt/azeroth-server/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DWITH_WARNINGS=1 -DTOOLS_BUILD=all -DSCRIPTS=static -DMODULES=static
 make -j `nproc` && make install
 cd ..
 bash apps/db_assembler/db_assembler.sh 5
 cd /opt/azeroth-server/
 mkdir data && cd data
-wget https://github.com/wowgaming/client-data/releases/download/v15/data.zip
+wget https://github.com/wowgaming/client-data/releases/download/v16/data.zip
 unzip data.zip
 rm -fr data.zip
 cd /opt/azeroth-server/etc/
@@ -108,13 +108,13 @@ cd /usr/src/
 git clone https://github.com/azerothcore/azerothcore-wotlk.git --branch master --single-branch azerothcore
 cd /usr/src/azerothcore/
 mkdir build && cd build
-cmake ../ -DCMAKE_INSTALL_PREFIX=/opt/azeroth-server/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DWITH_WARNINGS=1 -DTOOLS=0 -DSCRIPTS=static -DMODULES=static
+cmake ../ -DCMAKE_INSTALL_PREFIX=/opt/azeroth-server/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DWITH_WARNINGS=1 -DTOOLS_BUILD=all -DSCRIPTS=static -DMODULES=static
 make -j `nproc` && make install
 cd ..
 bash apps/db_assembler/db_assembler.sh 5
 cd /opt/azeroth-server/
 mkdir data && cd data
-wget https://github.com/wowgaming/client-data/releases/download/v15/data.zip
+wget https://github.com/wowgaming/client-data/releases/download/v16/data.zip
 unzip data.zip
 rm -fr data.zip
 cd /opt/azeroth-server/etc/
