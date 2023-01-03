@@ -17,8 +17,8 @@ Installed and configured LXD on your Linux.
 ## Components that will be installed
 OS: Ubuntu 20.04  
 AzerothCore: latest from GitHub  
-MariaDB: 10.3 or MySQL: 8.0  
-[Client data](https://github.com/wowgaming/client-data/releases/tag/v10)  
+MariaDB: 10.6 or MySQL: 8.0  
+[Client data](https://github.com/wowgaming/client-data/releases/tag/v15)  
 ACore restarter: https://github.com/nolt/acore-linux-restarter
 
 ## Installation
