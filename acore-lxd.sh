@@ -45,7 +45,7 @@ if [ "$MVER" = "mariadb" ] ; then
 
 	print_style "You chose MariaDB, installation will start now\n"
 
-lxc launch ubuntu:focal acoremariadb
+lxc launch ubuntu:jammy acoremariadb
 sleep 5
 
 lxc exec acoremariadb -- bash -c "
@@ -59,10 +59,17 @@ apt install -y clang cmake g++ gcc gdb git libboost-all-dev libbz2-dev libmariad
 mysql <<MYSQL_SCRIPT
 DROP USER IF EXISTS 'acore'@'localhost';
 DROP USER IF EXISTS 'acore'@'127.0.0.1';
-CREATE USER 'acore'@'localhost' IDENTIFIED BY 'acore';
-CREATE USER 'acore'@'127.0.0.1' IDENTIFIED BY 'acore';
-GRANT ALL PRIVILEGES ON * . * TO 'acore'@'localhost' WITH GRANT OPTION;
-GRANT ALL PRIVILEGES ON * . * TO 'acore'@'127.0.0.1' WITH GRANT OPTION;
+CREATE USER 'acore'@'localhost' IDENTIFIED BY 'acore' WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0;
+CREATE USER 'acore'@'127.0.0.1' IDENTIFIED BY 'acore' WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0;
+CREATE DATABASE 'acore_world' DEFAULT CHARACTER SET UTF8MB4 COLLATE utf8mb4_general_ci;
+CREATE DATABASE 'acore_characters' DEFAULT CHARACTER SET UTF8MB4 COLLATE utf8mb4_general_ci;
+CREATE DATABASE 'acore_auth' DEFAULT CHARACTER SET UTF8MB4 COLLATE utf8mb4_general_ci;
+GRANT ALL PRIVILEGES ON 'acore_world' . * TO 'acore'@'localhost' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON 'acore_characters' . * TO 'acore'@'localhost' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON 'acore_auth' . * TO 'acore'@'localhost' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON 'acore_world' . * TO 'acore'@'127.0.0.1' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON 'acore_characters' . * TO 'acore'@'127.0.0.1' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON 'acore_auth' . * TO 'acore'@'127.0.0.1' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 MYSQL_SCRIPT
 cd /usr/src/
@@ -71,8 +78,6 @@ cd /usr/src/azerothcore/
 mkdir build && cd build
 cmake ../ -DCMAKE_INSTALL_PREFIX=/opt/azeroth-server/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DWITH_WARNINGS=1 -DTOOLS_BUILD=all -DSCRIPTS=static -DMODULES=static
 make -j `nproc` && make install
-cd ..
-bash apps/db_assembler/db_assembler.sh 5
 cd /opt/azeroth-server/
 mkdir data && cd data
 wget https://github.com/wowgaming/client-data/releases/download/v16/data.zip
@@ -89,7 +94,7 @@ chmod +x acoreadmin.sh"
 else
 	print_style "You chose Oracle MySQL, installation will start now\n"
 
-lxc launch ubuntu:focal acoremysql
+lxc launch ubuntu:jammy acoremysql
 sleep 5
 
 lxc exec acoremysql -- bash -c "
@@ -98,10 +103,17 @@ apt install -y clang cmake g++ gcc gdb git libboost-all-dev libbz2-dev libmysqlc
 mysql <<MYSQL_SCRIPT
 DROP USER IF EXISTS 'acore'@'localhost';
 DROP USER IF EXISTS 'acore'@'127.0.0.1';
-CREATE USER 'acore'@'localhost' IDENTIFIED BY 'acore';
-CREATE USER 'acore'@'127.0.0.1' IDENTIFIED BY 'acore';
-GRANT ALL PRIVILEGES ON * . * TO 'acore'@'localhost' WITH GRANT OPTION;
-GRANT ALL PRIVILEGES ON * . * TO 'acore'@'127.0.0.1' WITH GRANT OPTION;
+CREATE USER 'acore'@'localhost' IDENTIFIED BY 'acore' WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0;
+CREATE USER 'acore'@'127.0.0.1' IDENTIFIED BY 'acore' WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0;
+CREATE DATABASE 'acore_world' DEFAULT CHARACTER SET UTF8MB4 COLLATE utf8mb4_general_ci;
+CREATE DATABASE 'acore_characters' DEFAULT CHARACTER SET UTF8MB4 COLLATE utf8mb4_general_ci;
+CREATE DATABASE 'acore_auth' DEFAULT CHARACTER SET UTF8MB4 COLLATE utf8mb4_general_ci;
+GRANT ALL PRIVILEGES ON 'acore_world' . * TO 'acore'@'localhost' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON 'acore_characters' . * TO 'acore'@'localhost' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON 'acore_auth' . * TO 'acore'@'localhost' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON 'acore_world' . * TO 'acore'@'127.0.0.1' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON 'acore_characters' . * TO 'acore'@'127.0.0.1' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON 'acore_auth' . * TO 'acore'@'127.0.0.1' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 MYSQL_SCRIPT
 cd /usr/src/
@@ -110,8 +122,6 @@ cd /usr/src/azerothcore/
 mkdir build && cd build
 cmake ../ -DCMAKE_INSTALL_PREFIX=/opt/azeroth-server/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DWITH_WARNINGS=1 -DTOOLS_BUILD=all -DSCRIPTS=static -DMODULES=static
 make -j `nproc` && make install
-cd ..
-bash apps/db_assembler/db_assembler.sh 5
 cd /opt/azeroth-server/
 mkdir data && cd data
 wget https://github.com/wowgaming/client-data/releases/download/v16/data.zip
