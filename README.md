@@ -12,12 +12,13 @@ Manual setup and installation LXD and AzerothCore
 [DIY installation](https://github.com/nolt/acore-lxd-image/wiki)
 
 ## Requirements
-Installed and configured LXD on your Linux.
+Installed and configured LXD on your Linux. (install and initialize setps are required)  
+https://documentation.ubuntu.com/lxd/en/latest/getting_started/
 
 ## Components that will be installed
-OS: Ubuntu 22.04  
+OS: Ubuntu 24.04  
 AzerothCore: latest from GitHub  
-MariaDB: 10.6 or MySQL: 8.0  
+MySQL: 8.4 LTS  
 [Client data](https://github.com/wowgaming/client-data/releases/tag/v16)  
 ACore restarter: https://github.com/nolt/acore-linux-restarter
 
