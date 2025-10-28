@@ -103,8 +103,8 @@ sleep 5
 
 lxc exec acoremysql -- bash -c "
 export DEBIAN_FRONTEND=noninteractive
-wget https://dev.mysql.com/get/mysql-apt-config_0.8.32-1_all.deb -P /tmp/
-apt -y install /tmp/mysql-apt-config_0.8.32-1_all.deb
+wget https://dev.mysql.com/get/mysql-apt-config_0.8.36-1_all.deb -P /tmp/
+apt -y install /tmp/mysql-apt-config_0.8.36-1_all.deb
 apt update && apt -y full-upgrade
 apt -y install clang cmake g++ gcc gdb git libboost-all-dev libbz2-dev libmysqlclient-dev libncurses-dev libreadline-dev libssl-dev make mysql-server screen unzip && apt clean
 mysql <<MYSQL_SCRIPT
@@ -131,9 +131,9 @@ cmake ../ -DCMAKE_INSTALL_PREFIX=/opt/azeroth-server/ -DCMAKE_C_COMPILER=/usr/bi
 make -j `nproc` && make install
 cd /opt/azeroth-server/
 mkdir data && cd data
-wget https://github.com/wowgaming/client-data/releases/download/v16/data.zip
-unzip data.zip
-rm -fr data.zip
+wget https://github.com/wowgaming/client-data/releases/download/v17/Data.zip
+unzip Data.zip
+rm -fr Data.zip
 cd /opt/azeroth-server/etc/
 cp -av authserver.conf.dist authserver.conf
 cp -av worldserver.conf.dist worldserver.conf
