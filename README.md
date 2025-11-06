@@ -19,7 +19,7 @@ https://documentation.ubuntu.com/lxd/en/latest/getting_started/
 OS: Ubuntu 24.04  
 AzerothCore: latest from GitHub  
 MySQL: 8.4 LTS  
-[Client data](https://github.com/wowgaming/client-data/releases/tag/v16)  
+[Client data](https://github.com/wowgaming/client-data/releases/download/v18.0/Data.zip)  
 ACore restarter: https://github.com/nolt/acore-linux-restarter
 
 ## Installation
