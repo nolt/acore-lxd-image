@@ -131,7 +131,7 @@ cmake ../ -DCMAKE_INSTALL_PREFIX=/opt/azeroth-server/ -DCMAKE_C_COMPILER=/usr/bi
 make -j `nproc` && make install
 cd /opt/azeroth-server/
 mkdir data && cd data
-wget https://github.com/wowgaming/client-data/releases/download/v17/Data.zip
+wget https://github.com/wowgaming/client-data/releases/download/v18.0/Data.zip
 unzip Data.zip
 rm -fr Data.zip
 cd /opt/azeroth-server/etc/
